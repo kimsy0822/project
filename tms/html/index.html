@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TMS - 사원관리시스템</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <link rel="stylesheet" href="../css/tms.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="../js/tms.js"></script>
+  <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <div class="header-wrap">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="logo navbar-brand" href="#">사원관리프로그램</a>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <!-- 로그인페이지  -->
+    <div class="container">
+      <h3 class="title">사원관리프로그램</h3>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputID" class="col-sm-2 control-label">사원번호</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputID" placeholder="0000000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPwd" class="col-sm-2 control-label">비밀번호</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPwd" placeholder="Password">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="btn-group">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#FindPwd">
+                비밀번호찾기
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="FindPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title" id="myModalLabel">비밀번호찾기</h4>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">ID</span>
+                  <input type="text" class="form-control" placeholder="사원번호를 입력하세요" aria-describedby="basic-addon1" id="idInput">
+                </div>
+                <div class="result">
+                  <hr>
+                  <p>비밀번호:1234</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="FindPwdBtn">찾기</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button id="loginbtn" type="button" class="btn btn-default" onclick="location.href='list.html'">로그인</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+  <footer><small>copyright&copy;TMS. All rights reserved.</small></footer>
+</body>
+</html>
